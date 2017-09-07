@@ -11,7 +11,7 @@ if __name__ == '__main__':
     fbtoken = '< Ctrl+V Your Facebook Token >'
     graph = facebook.GraphAPI(access_token=fbtoken, version='2.7')
     profile = graph.get_object(id="me" , fields="id,about,birthday,picture,cover,email,education,first_name,middle_name,last_name,name,name_format,gender,location{location},hometown,interested_in,is_verified,languages,political,quotes,relationship_status,religion,security_settings,link,website,work")
-    # Change id = { Authenticated OR UnAuthenticated Facebook Users ID }. In This Example { id="me" means YOU }
+    # Change id="me" to id="Authenticated OR UnAuthenticated Facebook Users ID". In This Example I Use id="me" means YOU.
     print(json.dumps(profile, indent=2))
 
     # while True:
